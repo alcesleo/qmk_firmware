@@ -12,7 +12,9 @@ brew cask install teensy
 cd keyboard/ergodox_ez/
 make clean
 make KEYMAP=alcesleo
-# make teensy
+
+# Or load it directly after building with:
+make teensy KEYMAP=alcesleo
 ```
 
 ## References
