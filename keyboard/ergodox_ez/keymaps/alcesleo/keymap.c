@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |      |      |      | LEFT |RIGHT |                                       | DOWN |  UP  |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                       ,----------------.   ,----------------.
- *                                       |Ctrl/Esc|Alt/Tab|   |Alt/Tab|Ctrl/Esc|
+ *                                       |Ctrl/Esc|Alt/Tab|   | MOUSE |Ctrl/Esc|
  *                                ,------|--------|-------|   |-------+--------+------.
  *                                |      |        |  Cmd  |   |  Cmd  |        |      |
  *                                |Bkspc | SYMBOL |-------|   |-------| Enter  |Space |
- *                                |      |        | Mouse |   |       |        |      |
+ *                                |      |        |       |   |       |        |      |
  *                                `-----------------------'   `-----------------------'
  */
 [DEFAULT] = KEYMAP(
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                         CTL_T(KC_ESC), ALT_T(KC_TAB),
                                                              KC_LGUI,
-                                      KC_BSPC, TG(SYMBOL), TG(MOUSE),
+                                          KC_BSPC, TG(SYMBOL), KC_NO,
 
         // Right hand
         KC_PLUS,  KC_6,    KC_7,    KC_8,    KC_9,     KC_0,    KC_NO,
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_END,   KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH, KC_RSFT,
                            KC_DOWN, KC_UP,   KC_NO,    KC_NO,   KC_NO,
 
-        ALT_T(KC_TAB), CTL_T(KC_ESC),
+        TG(MOUSE), CTL_T(KC_ESC),
         KC_RGUI,
         KC_NO, KC_ENTER, KC_SPACE
     ),
