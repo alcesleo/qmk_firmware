@@ -4,8 +4,8 @@
 
 #define DEFAULT 0 // Default layer
 #define SYMBOL  1 // Symbol layer
-#define MOUSE  2  // Mouse layer
-#define MEDIA  3  // Media/arrow layer
+#define MOUSE   2 // Mouse layer
+#define MEDIA   3 // Media/arrow layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Default layer
