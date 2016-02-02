@@ -13,16 +13,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |  1   |  2   |  3   |  4   |  5   |  -   |           |  +   |  6   |  7   |  8   |  9   |  0   |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Tab   |  Q   |  W   |  E   |  R   |  T   | Tab  |           |Enter |  Y   |  U   |  I   |  O   |  P   |   \    |
+ * |  Tab   |  Q   |  W   |  E   |  R   |  T   | Tab  |           |Enter |  Y   |  U   |  I   |  O   |  P   | MOUSE  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | Bkspc  |  A   |  S   |  D   |  F   |  G   |------|           |------|  H   |  J   |  K   |  L   |  ;:  |   '    |
+ * |        |  A   |  S   |  D   |  F   |  G   |------|           |------|  H   |  J   |  K   |  L   |  ;:  |   '    |
  * |--------+------+------+------+------+------| Home |           | End  |------+------+------+------+------+--------|
  * | LShift |  Z   |  X   |  C   |  V   |  B   |      |           |      |  N   |  M   |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      | LEFT |RIGHT |                                       | DOWN |  UP  |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                       ,----------------.   ,----------------.
- *                                       |Ctrl/Esc|Alt/Tab|   | MOUSE |Ctrl/Esc|
+ *                                       |Ctrl/Esc|Alt/Tab|   |       |Ctrl/Esc|
  *                                ,------|--------|-------|   |-------+--------+------.
  *                                |      |        |  Cmd  |   |  Cmd  |        |      |
  *                                |Bkspc | SYMBOL |-------|   |-------| Enter  |Space |
@@ -39,16 +39,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                         CTL_T(KC_ESC), ALT_T(KC_TAB),
                                                              KC_LGUI,
-                                      KC_BSPC, TG(SYMBOL), MO(MEDIA),
+                                      KC_BSPC, MO(SYMBOL), MO(MEDIA),
 
         // Right hand
         KC_PLUS,  KC_6,    KC_7,    KC_8,    KC_9,     KC_0,    KC_NO,
-        KC_ENTER, KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,    KC_BSLS,
+        KC_ENTER, KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,    TG(MOUSE),
                   KC_H,    KC_J,    KC_K,    KC_L,     KC_SCLN, KC_QUOT,
         KC_END,   KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH, KC_RSFT,
                            KC_DOWN, KC_UP,   KC_NO,    KC_NO,   KC_NO,
 
-        TG(MOUSE), CTL_T(KC_ESC),
+        KC_NO, CTL_T(KC_ESC),
         KC_RGUI,
         KC_NO, KC_ENTER, KC_SPACE
     ),
