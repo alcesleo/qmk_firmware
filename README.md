@@ -5,15 +5,15 @@
 ```bash
 # Install needed tools
 brew install osx-cross/avr/avr-libc # this might take forever
-brew install teensy_loader_cli
-brew cask install teensy
+brew cask install teensy            # for loading the hex-file manually
+brew install teensy_loader_cli      # for the make teensy command
 
-# Build the hex-file
+# Build the hex-file, then load it with the teensy app
 cd keyboard/ergodox_ez/
 make clean
 make KEYMAP=alcesleo
 
-# Or load it directly after building with:
+# Or load it automatically with teensy_loader_cli after building with:
 make teensy KEYMAP=alcesleo
 ```
 
